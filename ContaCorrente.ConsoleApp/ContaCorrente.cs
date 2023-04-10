@@ -17,8 +17,7 @@ namespace ContaCorrente.ConsoleApp
         public decimal saldo;
         public bool contaEspecial;
         public decimal limite;
-        List <Movimentacao> movimentacoes = new();
-
+        public List<Movimentacao> movimentacoes = new List<Movimentacao>();
         public decimal Saque(decimal quantidade)
         {
             if (quantidade > limite+saldo)
@@ -47,10 +46,10 @@ namespace ContaCorrente.ConsoleApp
             Console.WriteLine("Extrato Atual: ");
             foreach (var item in movimentacoes)
             {
-                if (item.Tipo.Equals("Transferencia"))
+                if (item.tipoDeMovimentacao.Equals("Transferencia"))
                 {}
                 else
-                    Console.WriteLine($"Tipo: {item.Tipo} | Quantidade: {item.quantidadeMovimentada}");
+                    Console.WriteLine($"Tipo: {item.tipoDeMovimentacao} | Quantidade: {item.quantidadeMovimentada}");
             }
         }
         public void VisualizaTransferencia()
@@ -58,9 +57,9 @@ namespace ContaCorrente.ConsoleApp
             Console.WriteLine("Transferencias: ");
             foreach (var item in movimentacoes)
             {
-                if (item.Tipo.Equals("Saque") || item.Tipo.Equals("Deposito"))
+                if (item.tipoDeMovimentacao.Equals("Saque") || item.tipoDeMovimentacao.Equals("Deposito"))
                 {}else
-                 Console.WriteLine($"Tipo: {item.tipoDeTransferencia} | De {item.Remetente}, na Quantidade de {item.quantidadeMovimentada} Para {item.Destinatario}");
+                 Console.WriteLine($"Tipo: {item.tipoDeTransferencia} | De {item.remetente}, na Quantidade de {item.quantidadeMovimentada} Para {item.destinatario}");
             }
         }
         public void TransferênciaPara(ContaCorrente contaDestino,decimal quantidade)

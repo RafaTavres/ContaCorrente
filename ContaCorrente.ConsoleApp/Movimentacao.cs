@@ -8,25 +8,25 @@ namespace ContaCorrente.ConsoleApp
 {
     internal class Movimentacao
     {
-        public string Tipo;
+        public string tipoDeMovimentacao;
         public string tipoDeTransferencia;
         public decimal quantidadeMovimentada;
-        public string Destinatario;
-        public string Remetente;
+        public string destinatario;
+        public string remetente;
 
-        public Movimentacao(string tipo, decimal quantidadeMovimentada)
+        public Movimentacao(string tipoMovimentacao, decimal quantidadeMovimentada)
         {
-            Tipo = tipo;
+            tipoDeMovimentacao = tipoMovimentacao;
             this.quantidadeMovimentada = quantidadeMovimentada;
         }
 
-        public Movimentacao(string tipo, string tipoDeTransferencia, decimal quantidadeMovimentada, string destinatario, string remetente)
+        public Movimentacao(string tipoMovimentacao, string tipoDeTransferencia, decimal quantidadeMovimentada, string destinatario, string remetente)
         {
-            Tipo = tipo;
+            tipoDeMovimentacao = tipoMovimentacao;
             this.tipoDeTransferencia = tipoDeTransferencia;
             this.quantidadeMovimentada = quantidadeMovimentada;
-            Destinatario = destinatario;
-            Remetente = remetente;
+            this.destinatario = destinatario;
+            this.remetente = remetente;
         }
     }
 }
