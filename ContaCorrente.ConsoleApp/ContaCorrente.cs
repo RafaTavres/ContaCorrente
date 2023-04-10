@@ -26,14 +26,14 @@ namespace ContaCorrente.ConsoleApp
             }
             else
             {
-                Movimentacao movimentacao = new Movimentacao("Saque", quantidade);
+                Movimentacao movimentacao = new Movimentacao("Credito", quantidade);
                 movimentacoes.Add(movimentacao);
                 return saldo -= quantidade;
             }
         }
         public decimal Deposito(decimal quantidade)
         {
-            Movimentacao movimentacao = new Movimentacao("Deposito",quantidade);
+            Movimentacao movimentacao = new Movimentacao("Debito",quantidade);
             movimentacoes.Add(movimentacao);
             return saldo += quantidade;
         }
@@ -57,7 +57,7 @@ namespace ContaCorrente.ConsoleApp
             Console.WriteLine("Transferencias: ");
             foreach (var item in movimentacoes)
             {
-                if (item.tipoDeMovimentacao.Equals("Saque") || item.tipoDeMovimentacao.Equals("Deposito"))
+                if (item.tipoDeMovimentacao.Equals("Credito") || item.tipoDeMovimentacao.Equals("Debito"))
                 {}else
                  Console.WriteLine($"Tipo: {item.tipoDeTransferencia} | De {item.remetente}, na Quantidade de {item.quantidadeMovimentada} Para {item.destinatario}");
             }
