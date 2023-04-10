@@ -8,11 +8,11 @@
             conta1.titular = "Marcelo";
             conta1.saldo = 10;
             conta1.numero = 12;
-            conta1.limite = 0;
+            conta1.limite = 100;
             conta1.contaEspecial = true;
             conta1.tipoDeTransferencia = "Credito";
 
-            conta1.Saque(100);
+            conta1.Saque(200);
             conta1.Deposito(500);
             conta1.Deposito(1000);
             conta1.VisualizaçãoSaldo();

@@ -20,7 +20,7 @@ namespace ContaCorrente.ConsoleApp
         public List<Movimentacao> movimentacoes = new List<Movimentacao>();
         public decimal Saque(decimal quantidade)
         {
-            if (quantidade > limite+saldo)
+            if (quantidade >= limite+saldo)
             {
                 return saldo;
             }
