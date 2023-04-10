@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-           ContaCorrente conta1 = new ContaCorrente();
+            ContaCorrente conta1 = new ContaCorrente();
             conta1.titular = "Marcelo";
             conta1.saldo = 10;
             conta1.numero = 12;

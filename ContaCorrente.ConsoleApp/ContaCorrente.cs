@@ -22,7 +22,7 @@ namespace ContaCorrente.ConsoleApp
         {
             if (quantidade > limite+saldo)
             {
-                return 0;
+                return saldo;
             }
             else
             {
